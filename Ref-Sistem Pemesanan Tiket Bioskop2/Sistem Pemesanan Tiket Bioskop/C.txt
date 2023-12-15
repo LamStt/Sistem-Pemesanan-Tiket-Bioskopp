@@ -1,0 +1,134 @@
+1. Admin
+        self.ID_Film = ID_Film
+        self.Judul = Judul
+        self.Genre = Genre
+        self.Durasi = Durasi
+        self.Tanggal_Rilis = Tanggal_Rilis
+        self.Harga_Film = Harga_Film
+
+2. Film
+        self.ID_Studio = ID_Studio
+        self.Nama_Studio = Nama_Studio
+        self.Kapasitas = Kapasitas
+        self.Lokasi = Lokasi
+
+3. Studio
+        self.ID_Jadwal = ID_Jadwal
+        self.ID_Film = ID_Film
+        self.ID_Studio = ID_Studio
+        self.Jam_Tayang = Jam_Tayang
+        self.Tanggal_Tayang = Tanggal_Tayang
+
+4. Jadwal
+        self.ID_Pemesan = ID_Pemesan
+        self.Nama_Lengkap = Nama_Lengkap
+        self.Email = Email
+        self.Nomor_Telepon = Nomor_Telepon
+
+5. Pemesan
+        self.ID_Pemesanan = ID_Pemesanan
+        self.ID_Jadwal = ID_Jadwal
+        self.ID_Pemesan = ID_Pemesan
+        self.Harga_Tiket = Harga_Tiket
+        self.Jumlah_Tiket = Jumlah_Tiket
+        self.Total_Harga = Total_Harga
+        self.Status_Pemesanan = Status_Pemesanan
+        self.Tanggal_Pemesanan = Tanggal_Pemesanan
+
+6. Pemesanan
+        self.ID_Admin = ID_Admin
+        self.Username = Username
+        self.Password = Password
+
+saya mempunyai Project "Sistem Pemesanan Tiket Bioskop" dengan tabel tabel diatas. bisakah anda membuat struktur laporan untuk saya? ini untuk tugas mata kuliah Pemrograman Berorientasi Objek.
+
+
+
+
+
+
+
+
+
+
+## III. Implementasi
+
+### B. Implementasi Kelas-Kelas
+
+1. Admin Class:
+   - Implementasi:
+     - Admin Class merepresentasikan admin sistem dengan atribut seperti ID_Admin, Username, dan Password.
+     - Fungsi-fungsi implementasi termasuk validasi login admin, pengelolaan akun admin, dan penanganan aktivitas administratif.
+
+2. Film Class:
+   - Implementasi:
+     - Film Class digunakan untuk menyimpan informasi terkait film yang dapat diputar, termasuk Judul, Genre, Durasi, Tanggal_Rilis, dan Harga_Film.
+     - Fungsi implementasi mencakup menambahkan film baru, mengupdate informasi film, dan menghapus film dari daftar.
+
+3. Studio Class:
+   - Implementasi:
+     - Studio Class merepresentasikan studio bioskop dengan atribut seperti ID_Studio, Nama_Studio, Kapasitas, dan Lokasi.
+     - Fungsi implementasi mencakup menambahkan studio baru, mengelola kapasitas studio, dan menghapus studio dari daftar.
+
+4. Jadwal Class:
+   - Implementasi:
+     - Jadwal Class bertanggung jawab untuk menyimpan informasi jadwal penayangan film, termasuk ID_Jadwal, ID_Film, ID_Studio, Jam_Tayang, dan Tanggal_Tayang.
+     - Fungsi-fungsi implementasi melibatkan penjadwalan film, mengelola jadwal penayangan, dan menghapus jadwal dari sistem.
+
+5. Pemesan Class:
+   - Implementasi:
+     - Pemesan Class merepresentasikan individu yang memesan tiket bioskop dengan atribut seperti ID_Pemesan, Nama_Lengkap, Email, dan Nomor_Telepon.
+     - Fungsi implementasi mencakup pembuatan data pemesan, pembaruan informasi pemesan, dan penghapusan data pemesan.
+
+6. Pemesanan Class:
+   - Implementasi:
+     - Pemesanan Class mengelola detail pemesanan tiket, termasuk ID_Pemesanan, ID_Jadwal, ID_Pemesan, Harga_Tiket, Jumlah_Tiket, Total_Harga, Status_Pemesanan, dan Tanggal_Pemesanan.
+     - Fungsi-fungsi implementasi mencakup proses pemesanan tiket, pembatalan pemesanan, dan pembaruan status pemesanan.
+
+Hubungan Antara Kelas:
+
+1. Admin dan Film:
+   - Hubungan one-to-many. Satu admin dapat mengelola banyak film, tetapi satu film hanya dapat dielola oleh satu admin.
+
+2. Film dan Studio:
+   - Hubungan many-to-one. Banyak film dapat ditayangkan di satu studio, tetapi satu film hanya ditayangkan di satu studio.
+
+3. Studio dan Jadwal:
+   - Hubungan one-to-many. Satu studio dapat memiliki banyak jadwal penayangan, tetapi satu jadwal penayangan hanya terkait dengan satu studio.
+
+4. Jadwal dan Pemesanan:
+   - Hubungan one-to-many. Satu jadwal penayangan dapat memiliki banyak pemesanan tiket, tetapi satu pemesanan tiket hanya terkait dengan satu jadwal.
+
+5. Pemesanan dan Pemesan:
+   - Hubungan many-to-one. Banyak pemesanan tiket dapat terkait dengan satu pemesan, tetapi satu pemesan dapat memiliki banyak pemesanan tiket.
+
+6. Pemesanan dan Jadwal:
+   - Hubungan many-to-one. Banyak pemesanan tiket dapat terkait dengan satu jadwal penayangan, tetapi satu jadwal penayangan hanya terkait dengan satu pemesanan tiket.
+
+Dengan implementasi kelas-kelas yang diperbarui ini, diharapkan sistem dapat memenuhi kebutuhan fungsional proyek "Sistem Pemesanan Tiket Bioskop" dan memberikan struktur yang efisien untuk pengelolaan data terkait film, studio, jadwal penayangan, pemesan, pemesanan, dan admin.
+
+=======
+
+## V. Kesimpulan
+
+Proyek "Sistem Pemesanan Tiket Bioskop" berhasil diimplementasikan dengan menggunakan Python sebagai bahasa pemrograman utama dan MySQL sebagai sistem manajemen basis data. Berikut adalah kesimpulan singkat yang merangkum hasil proyek dan pembelajaran yang diperoleh:
+
+1. Implementasi Sistem Berhasil:
+   - Sistem pemesanan tiket bioskop telah berhasil diimplementasikan dengan fungsionalitas utama seperti pencarian film, jadwal penayangan, pemesanan tiket, dan manajemen pemesanan.
+
+2. Responsif dan Efisien:
+   - Antarmuka pengguna (UI) yang dibangun dengan HTML, CSS, dan JavaScript memberikan pengalaman pengguna yang responsif dan mudah digunakan.
+
+3. Keamanan dan Keterandalan:
+   - Penggunaan MySQL sebagai sistem manajemen basis data memberikan keamanan dan keterandalan dalam penyimpanan dan pengambilan data, memastikan integritas dan konsistensi informasi.
+
+4. Pembelajaran Tentang Pemrograman Web dan Basis Data:
+   - Proyek ini memberikan pemahaman mendalam tentang pengembangan web menggunakan kerangka kerja Django, pembuatan antarmuka pengguna yang responsif, dan pengelolaan basis data relasional dengan MySQL.
+
+5. Kesempatan untuk Perbaikan dan Pengembangan:
+   - Evaluasi proyek juga mengidentifikasi area-area yang dapat ditingkatkan atau dikembangkan lebih lanjut di masa mendatang, seperti peningkatan fitur, penanganan situasi-situasi tertentu, atau peningkatan keamanan.
+
+6. Kesimpulan Umum:
+   - Dengan keseluruhan implementasi, proyek ini membuktikan bahwa menggunakan Python dan MySQL sebagai teknologi utama memberikan solusi yang efektif untuk membangun sistem pemesanan tiket bioskop yang fungsional dan dapat diandalkan.
+
+Proyek ini bukan hanya mencapai tujuannya untuk membangun sistem pemesanan tiket, tetapi juga memberikan pengalaman berharga dalam pengembangan perangkat lunak berbasis web dan manajemen basis data. Kesimpulan ini mencerminkan pencapaian proyek dan membuka pintu untuk potensi pengembangan dan perbaikan di masa depan.
